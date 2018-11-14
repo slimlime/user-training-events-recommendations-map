@@ -14,6 +14,7 @@
 * 30 minutes Google Maps with user location + markers. Event details popup.
 * 30 minutes tests + … hours if unintended bugs found. Finalising
 * ++ fun time CI/CD, repeatable visual studio workspace config to source control, Docker, Travis CI, AWS CodePipeline,
+* +++ Better TSLint rules - Microsoft SDL
 
 1. Create configured Angular project
   a. `ng new UserLocationTrainingEventMapRecommendations --routing --style=scss`
