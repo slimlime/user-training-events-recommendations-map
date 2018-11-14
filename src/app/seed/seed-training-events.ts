@@ -6,11 +6,12 @@ const DATA_DESCRIPTION_PLACEHOLDER_TEXT = 'Lorem ipsum dolor sit amet, \
     ullamco laboris nisi ut aliquip ex ea commodo consequat.\
 ';
 
+
 /**
-* Generate ISO 8601 seed date time for future events from current datetime.
-* -- TODO: move to random generation to Mock provider/service. Static utility?
-* @returns {string}
-*/
+ * Generate ISO 8601 seed date time for future events from current datetime.
+ * -- TODO: move to random generation to Mock provider/service. Static utility?
+ * @returns {string}
+ */
 function generateFutureDateIso8601(): string {
     const currentDateTimeEpoch: number = Date.now();
     console.log('​currentDateTimeEpoch', currentDateTimeEpoch);
