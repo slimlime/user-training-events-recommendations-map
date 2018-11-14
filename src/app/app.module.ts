@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MasterEventsListPageComponent } from './pages/master-events-list-page/master-events-list-page.component';
+import { MapViewPageComponent } from './pages/map-view-page/map-view-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MasterEventsListPageComponent
+    MasterEventsListPageComponent,
+    MapViewPageComponent
   ],
   imports: [
     BrowserModule,
