@@ -10,6 +10,7 @@ export class MockTrainingEventApiService {
 
   constructor() { }
 
+  // - TODO: Add asynchronous reactivity e.g. Promise Observable to mock delay in network requests.
 
   /**
    * Default five events
