@@ -8,10 +8,10 @@ const DATA_DESCRIPTION_PLACEHOLDER_TEXT = 'Lorem ipsum dolor sit amet, \
 
 /**
 * Generate ISO 8601 seed date time for future events from current datetime.
-* -- TODO Mock provider/service.
+* -- TODO: move to random generation to Mock provider/service. Static utility?
 * @returns {string}
 */
-function generateFutureDate(): string {
+function generateFutureDateIso8601(): string {
     const currentDateTimeEpoch: number = Date.now();
     console.log('​currentDateTimeEpoch', currentDateTimeEpoch);
 
@@ -23,7 +23,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 1,
     title              : 'Event Title A',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -33,7 +33,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 2,
     title              : 'Event Title B',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -43,7 +43,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 3,
     title              : 'Event Title C',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -53,7 +53,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 4,
     title              : 'Event Title D',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -63,7 +63,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 5,
     title              : 'Event Title E',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -73,7 +73,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 6,
     title              : 'Event Title F',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -83,7 +83,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 7,
     title              : 'Event Title G',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -93,7 +93,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 8,
     title              : 'Event Title H',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -103,7 +103,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 9,
     title              : 'Event Title I',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -113,7 +113,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 10,
     title              : 'Event Title J',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
@@ -123,7 +123,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 11,
     title              : 'Event Title Sydney',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Sydney',
@@ -133,7 +133,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 12,
     title              : 'Event Title Sydney 2',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Sydney',
@@ -143,7 +143,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 13,
     title              : 'Event Title Melbourne',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Sydney',
@@ -153,7 +153,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
 {
     id                 : 14,
     title              : 'Event Title Melbourne 2',
-    dateTime           : generateFutureDate(),
+    dateTime           : generateFutureDateIso8601(),
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Sydney',
