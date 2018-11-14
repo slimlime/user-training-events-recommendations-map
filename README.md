@@ -6,8 +6,9 @@
 1. Create configured Angular project
   a. `ng new UserLocationTrainingEventMapRecommendations --routing --style=scss`
 2. Create data model interface (or class) for `app/models/TrainingEvent.ts`
+  a. `models/TrainingEvent` interface
 3. Create seed data
-  a. `models/TrainingEvent.ts` interface
+  a. `seed/SeedTrainingEvent`
 4. `ng generate service services/MockTrainingEventApi --dryRun`
   a. (i.e. MockTrainingEventApiService)
 5. `ng generate service services/Geolocation`
@@ -78,7 +79,6 @@ You will need to calculate distance between positions to achieve the required fu
 * Package your application in a Docker container.
 * Achieve >80% test coverage.
 * _Impress us by adding something amazing that's not documented above._
-
 
 # UserLocationTrainingEventMapRecommendations
 
