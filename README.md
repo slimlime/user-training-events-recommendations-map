@@ -35,7 +35,7 @@
     ○ E2E tests (Protractor)
 \>80% Test coverage
 
-# GO1-Front-End-Test
+## GO1-Front-End-Test
 
 Files for GO1 Front End tech test.
 
@@ -80,7 +80,7 @@ You will need to calculate distance between positions to achieve the required fu
 * Achieve >80% test coverage.
 * _Impress us by adding something amazing that's not documented above._
 
-# UserLocationTrainingEventMapRecommendations
+## UserLocationTrainingEventMapRecommendations
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
