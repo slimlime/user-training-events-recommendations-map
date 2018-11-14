@@ -37,7 +37,9 @@
 7. Create components (e.g. file structure app/components, app/services)
     a. MasterEventsListPage   (// would be a `Page` if using Ionic)
       i. `Ng generate component pages/MasterEventsListPage`
-        1) EventDetail
+        1) EventListItem
+          a) `ng generate component components/EventListItem`
+        2) EventDetail
           a) `ng generate component components/EventDetail`
     b. MapViewPage
       i. `Ng generate component pages/MapViewPage`
