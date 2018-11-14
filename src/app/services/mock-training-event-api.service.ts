@@ -80,7 +80,7 @@ export class MockTrainingEventApiService {
 
     const soonestFutureComparison = this.compareDateSoonest(
       givenEvent.dateTime,
-      givenEvent.dateTime
+      comparisonEvent.dateTime
     );
 
     // If first givenDate is equal to comparisonDate return 0;
@@ -103,11 +103,15 @@ export class MockTrainingEventApiService {
    * @memberof MockTrainingEventApiService
    */
   compareDateSoonest(givenDate: string, comparisonDate: string): number {
+
+    console.log('​MockTrainingEventApiService:: constructor() -> givenDate', givenDate);
+    console.log('​MockTrainingEventApiService:: constructor() -> comparisonDate', comparisonDate);
     // Comparing the givenDate to the other comparisonDate
     // If first givenDate is equal to comparisonDate return 0;
     // If first givenDate is smaller, -1 or the negative difference.
     // If first givenDate is larger, +1 (can just use the difference if arith)
     const givenDateIsSooner = givenDate < comparisonDate;
+    console.log('​MockTrainingEventApiService:: constructor() -> givenDateIsSooner', givenDateIsSooner);
 
 
     // doesn't matter whether -1 or 0. unless possible recursion?
