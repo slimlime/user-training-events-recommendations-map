@@ -12,10 +12,10 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.\
 * @returns {string}
 */
 function generateFutureDate(): string {
-const currentDateTimeEpoch: number =  Date.now();
-console.log('​currentDateTimeEpoch', currentDateTimeEpoch);
+    const currentDateTimeEpoch: number = Date.now();
+    console.log('​currentDateTimeEpoch', currentDateTimeEpoch);
 
-return 'hi';
+    return 'hi';
 }
 
 // Seed data
