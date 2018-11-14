@@ -31,12 +31,12 @@ export class MockTrainingEventApiService {
    * @returns {TrainingEvent[]}
    * @memberof MockTrainingEventApiService
    */
-  getMostRecentEvents(numEvents: number = 5): TrainingEvent[] {
+  getMostRecentUpcomingEvents(numEvents: number = 5): TrainingEvent[] {
     const events = this.getEvents(numEvents);
 
     const mostRecentEvents = this.sortEventsDateTimeSoonest(events);
 
-    return ;
+    return mostRecentEvents;
   }
 
 

@@ -15,7 +15,9 @@ export class MasterEventsListPageComponent implements OnInit {
   }
 
   ngOnInit() {
-    const trainingEvents: TrainingEvent[] = this.trainingEventApiService.getEvents();
+    const trainingEvents: TrainingEvent[] = this.trainingEventApiService
+      .getMostRecentUpcomingEvents()
+    ;
     console.log('​MasterEventsListPageComponent:: ngOnInit() -> trainingEvents', trainingEvents);
 
   }
