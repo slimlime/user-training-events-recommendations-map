@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TrainingEvent } from '../../models/training-event';
+import { MockTrainingEventApiService } from './../../services/mock-training-event-api.service';
+
 @Component({
   selector: 'app-master-events-list-page',
   templateUrl: './master-events-list-page.component.html',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MasterEventsListPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public trainingEventApiService: MockTrainingEventApiService) {
+
+  }
 
   ngOnInit() {
+    const trainingEvents: TrainingEvent[] = this.trainingEventApiService.getEvents();
+    console.log('​MasterEventsListPageComponent:: ngOnInit() -> trainingEvents', trainingEvents);
+
   }
 
 }

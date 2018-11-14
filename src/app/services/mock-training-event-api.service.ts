@@ -10,12 +10,22 @@ export class MockTrainingEventApiService {
 
   constructor() { }
 
-  getEvents() {
 
+  /**
+   * Default five events
+   *
+   * @param {number} [numEvents=5]
+   * @returns {TrainingEvent[]}
+   * @memberof MockTrainingEventApiService
+   */
+  getEvents(numEvents: number = 5): TrainingEvent[] {
+    const seedTestData = DATA_SEED_TRAINING_EVENTS;
+
+    return seedTestData;
   }
 
   /**
-   * Default next five events
+   * Default next five 'upcoming' events in order from soonest to latest.
    *
    * @param {number} [numEvents=5]
    * @returns {TrainingEvent[]}
