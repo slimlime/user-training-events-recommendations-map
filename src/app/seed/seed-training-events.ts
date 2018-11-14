@@ -58,7 +58,6 @@ function generateFutureDateIso8601(): string {
     const futureDate: Date = new Date(futureEpoch);
 
     const futureDateIso8601: string = futureDate.toISOString();
-    console.log('​futureDateIso8601', futureDateIso8601);
 
     return futureDateIso8601;
 }
