@@ -21,7 +21,7 @@
 * Added notes:
 * * Update `package.json` to avoid emergent new Angular 6 project bugs with 
   Jasmine/Typescript version compatibility
-* * `npm install --save @types/googlemaps`
+* * `npm install @types/googlemaps`
 1. Create data model interface (or class) for `app/models/TrainingEvent.ts`
   a. `models/TrainingEvent` interface
 3. Create seed data
