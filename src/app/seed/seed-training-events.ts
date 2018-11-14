@@ -7,16 +7,61 @@ const DATA_DESCRIPTION_PLACEHOLDER_TEXT = 'Lorem ipsum dolor sit amet, \
 ';
 
 
+// lol. Magic numbers. -- TODO: Encapsulate logic. YAGNI.
+const millisecondsPerSecond = 1000;
+const secondsPerMinute = 60;
+const minutesPerHour = 60;
+const hoursPerDay = 24;
+const daysPerYear = 365;
+
+/**
+ * Get random integer from a given max range.
+ * 0..max
+ * @param {*} maxEpochSeconds Max top range.
+ * @returns {number}
+ */
+function getRandomInt(maxEpochSeconds): number {
+    const pseudorandomFraction = Math.random() * maxEpochSeconds;
+    console.log('​getRandomInt() -> pseudorandomFraction', pseudorandomFraction);
+
+    const pseudorandomInt = Math.floor(pseudorandomFraction);
+    console.log('​pseudorandomInt', pseudorandomInt);
+
+    return pseudorandomInt;
+}
+
+function getRandomFutureEpoch(givenCurrentDateTimeEpoch: number) {
+
+}
+
 /**
  * Generate ISO 8601 seed date time for future events from current datetime.
+ * -- Can decompose some parts. Epoch separate from ISOString test.
  * -- TODO: move to random generation to Mock provider/service. Static utility?
- * @returns {string}
+ * @returns {string} Future DateTime in ISO 8601 format.
  */
 function generateFutureDateIso8601(): string {
-    const currentDateTimeEpoch: number = Date.now();
-    console.log('​currentDateTimeEpoch', currentDateTimeEpoch);
 
-    return 'hi';
+    // Get current DateTime. Date uses epoch in milliseconds.
+    const currentDateTimeEpoch: number = Date.now();
+    // Set range for randomiser ( testing a range of days within a year. )
+    const millisecondsPerYear = millisecondsPerSecond *
+        secondsPerMinute *
+        minutesPerHour *
+        hoursPerDay *
+        daysPerYear
+    ;
+    const maxSecondsLimitRange = millisecondsPerYear;
+
+    // Get randomised epoch ms to add to current DateTime to get future DateTime
+    const randomFutureEpochAdd: number = getRandomInt(maxSecondsLimitRange);
+    const futureEpoch: number = currentDateTimeEpoch + randomFutureEpochAdd;
+    const futureDate: Date = new Date(futureEpoch);
+
+    const futureDateIso8601: string = futureDate.toISOString();
+    console.log('​futureDateIso8601', futureDateIso8601);
+
+    return futureDateIso8601;
 }
 
 // Seed data
