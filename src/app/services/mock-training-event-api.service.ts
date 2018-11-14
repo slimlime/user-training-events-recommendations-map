@@ -14,7 +14,10 @@ export class MockTrainingEventApiService {
   /**
    * Default five events
    *
-   * @param {number} [numEvents=5]
+   * @param {number} [numEvents=5] // Unused as need to process whole mock data in app.\
+   * API would ideally sort before retrieving the results.
+   * Otherwise have to SELECT the whole table just for application usage
+   *
    * @returns {TrainingEvent[]}
    * @memberof MockTrainingEventApiService
    */
@@ -28,16 +31,22 @@ export class MockTrainingEventApiService {
    * Default next five 'upcoming' events in order from soonest to latest.
    * Could make more generic.
    *
-   * @param {number} [numEvents=5] Default value five upcoming events.
+   * @param {number} [numEventsWanted=5] Default value five upcoming events to retrieve/select.
    * @returns {TrainingEvent[]}
    * @memberof MockTrainingEventApiService
    */
-  getMostRecentUpcomingEvents(numEvents: number = 5): TrainingEvent[] {
-    const events = this.getEvents(numEvents);
+  getMostRecentUpcomingEvents(numEventsWanted: number = 5): TrainingEvent[] {
+    const events = this.getEvents(numEventsWanted);
 
     const mostRecentEvents = this.sortEventsDateTimeSoonest(events);
+    console.log('​MockTrainingEventApiService:: constructor() -> mostRecentEvents', mostRecentEvents);
 
-    return mostRecentEvents;
+    // Get the specified number of events after sorting. E.g. Next five events.
+    // First five events slice 0..5 or undefined,5 for optional parameter.
+    const mostRecentEventsNextNumSlice = mostRecentEvents.slice(undefined, numEventsWanted);
+    console.log('​MockTrainingEventApiService:: constructor() -> mostRecentEventsNextSlice', mostRecentEventsNextNumSlice);
+
+    return mostRecentEventsNextNumSlice;
   }
 
   /**
