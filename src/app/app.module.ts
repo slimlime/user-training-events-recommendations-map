@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MasterEventsListPageComponent } from './pages/master-events-list-page/master-events-list-page.component';
 import { MapViewPageComponent } from './pages/map-view-page/map-view-page.component';
 import { EventDetailComponent } from './components/event-detail/event-detail.component';
+import { EventListItemComponent } from './components/event-list-item/event-list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MasterEventsListPageComponent,
     MapViewPageComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    EventListItemComponent
   ],
   imports: [
     BrowserModule,
