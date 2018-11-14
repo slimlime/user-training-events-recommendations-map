@@ -26,6 +26,7 @@ export class MockTrainingEventApiService {
 
   /**
    * Default next five 'upcoming' events in order from soonest to latest.
+   * Could make more generic.
    *
    * @param {number} [numEvents=5] Default value five upcoming events.
    * @returns {TrainingEvent[]}
@@ -39,6 +40,41 @@ export class MockTrainingEventApiService {
     return mostRecentEvents;
   }
 
+  /**
+   * Get events at the user's current location city to fulfil requirement:
+   * *Display events based on user's location.*
+   *
+   * @param {string} locationCityName
+   * @param {number} [numEvents=5]
+   * @returns {TrainingEvent[]}
+   * @memberof MockTrainingEventApiService
+   */
+  getMostRecentUpcomingEventsInCityLocation(
+    locationCityName: string,
+    numEvents: number = 5
+  ): TrainingEvent[] {
+    const events = this.getEvents();
+
+    // Get events for a specific city.
+    const cityEvents = events.filter((trainingEvent: TrainingEvent) => {
+      const eventIsAtCity = this.eventFilterHasCity(trainingEvent, locationCityName);
+      return eventIsAtCity;
+    });
+
+    const mostRecentUpcomingCityEvents = this.sortEventsDateTimeSoonest(cityEvents);
+
+    return mostRecentUpcomingCityEvents;
+  }
+
+  eventFilterHasCity(
+    trainingEvent: TrainingEvent,
+    givenLocationCityName: string
+  ) {
+    const trainingEventCityName = trainingEvent.locationCityName;
+    const sameCityNameFound = trainingEventCityName === givenLocationCityName;
+
+    return sameCityNameFound;
+  }
 
   /**
    *
@@ -104,15 +140,11 @@ export class MockTrainingEventApiService {
    */
   compareDateSoonest(givenDate: string, comparisonDate: string): number {
 
-    console.log('​MockTrainingEventApiService:: constructor() -> givenDate', givenDate);
-    console.log('​MockTrainingEventApiService:: constructor() -> comparisonDate', comparisonDate);
     // Comparing the givenDate to the other comparisonDate
     // If first givenDate is equal to comparisonDate return 0;
     // If first givenDate is smaller, -1 or the negative difference.
     // If first givenDate is larger, +1 (can just use the difference if arith)
     const givenDateIsSooner = givenDate < comparisonDate;
-    console.log('​MockTrainingEventApiService:: constructor() -> givenDateIsSooner', givenDateIsSooner);
-
 
     // doesn't matter whether -1 or 0. unless possible recursion?
 

@@ -20,6 +20,11 @@ export class MasterEventsListPageComponent implements OnInit {
     ;
     console.log('​MasterEventsListPageComponent:: ngOnInit() -> trainingEvents', trainingEvents);
 
+    const upcomingSortedEventsAtBrisbane = this.trainingEventApiService
+      .getMostRecentUpcomingEventsInCityLocation('Brisbane')
+    ;
+    console.log('​MasterEventsListPageComponent:: ngOnInit() -> upcomingSortedEventsAtBrisbane', upcomingSortedEventsAtBrisbane);
+
   }
 
 }
