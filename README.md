@@ -1,7 +1,10 @@
 # Planning
 
-5:30am
-30 mins planning project structure
+* 5:30am
+* Alternate lean journal log instead of GitHub issue tracking/project management tab (e.g. hn algolia paginator repo)
+* 30 minutes planning project structure
+* 15-30 minutes discovering and resolving emergent bug November for new Angular 6 projects `https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30310` for Jasmine testing
+* 30 minutes mock TrainingEvents API
 
 1. Create configured Angular project
   a. `ng new UserLocationTrainingEventMapRecommendations --routing --style=scss`
