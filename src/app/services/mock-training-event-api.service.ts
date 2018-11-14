@@ -55,11 +55,20 @@ export class MockTrainingEventApiService {
    * Comparison function to get the future event that is happening soonest.
    * The future dates that have least values are closest to the current date.
    * Assumed.
-   *
+   * For Array.sort();
    * @memberof MockTrainingEventApiService
    */
-  compareUpcomingEventSoonest() {
+  compareUpcomingEventSoonest(givenDate: string, comparisonDate: string): number {
+    // Comparing the givenDate to the other comparisonDate
+    // If first givenDate is equal to comparisonDate return 0;
+    // If first givenDate is smaller, -1 or the negative difference.
+    // If first givenDate is larger, +1 (can just use the difference if arith)
+    const givenDateIsSooner = givenDate < comparisonDate;
+    console.log('​MockTrainingEventApiService:: compareUpcomingEventSoonest() -> dateDifference', dateDifference);
 
+    // doesn't matter whether -1 or 0. unless possible recursion?
+
+    return givenDateIsSooner ? -1 : 1;
   }
 
 
