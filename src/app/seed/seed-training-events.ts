@@ -22,10 +22,9 @@ const daysPerYear = 365;
  */
 function getRandomInt(maxEpochSeconds): number {
     const pseudorandomFraction = Math.random() * maxEpochSeconds;
-    console.log('​getRandomInt() -> pseudorandomFraction', pseudorandomFraction);
 
+    // Rounds to int. floor/ceil.
     const pseudorandomInt = Math.floor(pseudorandomFraction);
-    console.log('​pseudorandomInt', pseudorandomInt);
 
     return pseudorandomInt;
 }
