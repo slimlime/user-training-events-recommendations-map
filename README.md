@@ -1,10 +1,19 @@
 # Planning
 
-* 5:30am
+* Alternate lean journal log instead of GitHub issue tracking/project management tab (e.g. hn algolia paginator repo)
+* /Proposed task estimation
+* 5:30 am
 * Alternate lean journal log instead of GitHub issue tracking/project management tab (e.g. hn algolia paginator repo)
 * 30 minutes planning project structure
 * 15-30 minutes discovering and resolving emergent bug November for new Angular 6 projects `https://github.com/DefinitelyTyped/DefinitelyTyped/issues/30310` for Jasmine testing
 * 30 minutes mock TrainingEvents API
+* 10 minutes master events list component display
+* 30 minutes Geolocation
+* 10-20 minutes Check training events by city for user-relevant data.
+* 10 minutes event details working properly^
+* 30 minutes Google Maps with user location + markers. Event details popup.
+* 30 minutes tests + … hours if unintended bugs found. Finalising
+* ++ fun time CI/CD, repeatable visual studio workspace config to source control, Docker, Travis CI, AWS CodePipeline,
 
 1. Create configured Angular project
   a. `ng new UserLocationTrainingEventMapRecommendations --routing --style=scss`
