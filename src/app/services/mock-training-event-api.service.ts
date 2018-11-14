@@ -39,7 +39,7 @@ export class MockTrainingEventApiService {
     const events = this.getEvents(numEventsWanted);
 
     const mostRecentEvents = this.sortEventsDateTimeSoonest(events);
-    console.log('​MockTrainingEventApiService:: constructor() -> mostRecentEvents', mostRecentEvents);
+    console.log('​MockTrainingEventApiService:: constructor() -> mostRecentEvents full list', mostRecentEvents);
 
     // Get the specified number of events after sorting. E.g. Next five events.
     // First five events slice 0..5 or undefined,5 for optional parameter.
@@ -54,13 +54,13 @@ export class MockTrainingEventApiService {
    * *Display events based on user's location.*
    *
    * @param {string} locationCityName
-   * @param {number} [numEvents=5]
+   * @param {number} [numEventsWanted=5]
    * @returns {TrainingEvent[]}
    * @memberof MockTrainingEventApiService
    */
-  getMostRecentUpcomingEventsInCityLocation(
+  getMostRecentUpcomingEventsNumSliceInCityLocation(
     locationCityName: string,
-    numEvents: number = 5
+    numEventsWanted: number = 5
   ): TrainingEvent[] {
     const events = this.getEvents();
 
@@ -72,7 +72,12 @@ export class MockTrainingEventApiService {
 
     const mostRecentUpcomingCityEvents = this.sortEventsDateTimeSoonest(cityEvents);
 
-    return mostRecentUpcomingCityEvents;
+    const mostRecentUpcomingCityEventsNumSlice = mostRecentUpcomingCityEvents
+      .slice(undefined, numEventsWanted)
+    ;
+
+
+    return mostRecentUpcomingCityEventsNumSlice;
   }
 
   eventFilterHasCity(
