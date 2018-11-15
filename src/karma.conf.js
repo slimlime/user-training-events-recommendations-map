@@ -5,8 +5,8 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     files: [
-      'src/app/mocks/google-maps-mock.js',
-      'http://maps.googleapis.com/maps/api/js?sensor=false&language=en'
+      'app/mocks/google-maps-mock.js',
+      // 'http://maps.googleapis.com/maps/api/js?sensor=false&language=en'
     ],
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
