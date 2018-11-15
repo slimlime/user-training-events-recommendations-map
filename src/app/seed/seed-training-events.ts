@@ -81,7 +81,7 @@ export const DATA_SEED_TRAINING_EVENTS: TrainingEvent[] = [
     imageUrl           : 'http://via.placeholder.com/100x100',
     availableSeats     : 128,
     locationCityName   : 'Brisbane',
-    locationCoordinates: [-27.597707, 154.025123],
+    locationCoordinates: [-27.467907, 153.025133],
     description        : DATA_DESCRIPTION_PLACEHOLDER_TEXT
 },
 {
