@@ -19,18 +19,28 @@ export class EventDetailComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    const trainingEvent = this.getEventInformation(this.activatedRoute, this.trainingEventApiService);
+    this.trainingEvent = trainingEvent;
   }
 
+  /**
+   *
+   *
+   * @param {ActivatedRoute} activatedRoute
+   * @param {MockTrainingEventApiService} eventApi
+   * @returns {TrainingEvent}
+   * @memberof EventDetailComponent
+   */
   getEventInformation(
     activatedRoute: ActivatedRoute,
     eventApi: MockTrainingEventApiService
-  ) {
+  ): TrainingEvent {
     // Get parameter string id and convert to number.
     const eventIDParam = activatedRoute.snapshot.paramMap.get('id');
     const eventID: number = +eventIDParam;
     // Get event information for the given id.
-    eventApi.getEventByID(+eventID);
+    const trainingEvent = eventApi.getEventByID(+eventID);
 
+    return trainingEvent;
   }
 }
