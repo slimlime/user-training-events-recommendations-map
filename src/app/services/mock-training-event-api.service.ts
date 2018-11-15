@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 
-import { TrainingEvent } from './../models/training-event';
+import { TrainingEvent, LocationCoordinatePt } from './../models/training-event';
 import { DATA_SEED_TRAINING_EVENTS } from './../seed/seed-training-events';
+import { GeoUtilityService } from './geo-utility.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MockTrainingEventApiService {
 
-  constructor() { }
+  constructor(public geoUtilityService: GeoUtilityService) {
+
+  }
 
   // - TODO: Add asynchronous reactivity e.g. Promise Observable to mock delay in network requests.
 
@@ -99,6 +102,22 @@ export class MockTrainingEventApiService {
     return mostRecentUpcomingCityEventsNumSlice;
   }
 
+  /**
+   * Get most recent upcoming events closest to coordinates
+   * e.g. Pass user location to get most relevant results.
+   *
+   * @param {LocationCoordinatePt} coordinates
+   * @param {number} [numEventsWanted=5]
+   * @returns {TrainingEvent[]}
+   * @memberof MockTrainingEventApiService
+   */
+  getMostRecentUpcomingEventsClosestToCoordinates(
+    coordinates: LocationCoordinatePt,
+    numEventsWanted: number = 5)
+  : TrainingEvent[] {
+    
+    return ;
+  }
   /**
    * Utility function for filtering events array
    *
