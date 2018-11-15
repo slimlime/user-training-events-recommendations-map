@@ -1,8 +1,9 @@
-import { LocationCoordinatePt, TrainingEvent } from './../../models/training-event';
-/// <reference types="@types/googlemaps" />
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 
+import { LocationCoordinatePt, TrainingEvent } from './../../models/training-event';
 import { GeolocationService } from './../../services/geolocation.service';
+import { MockTrainingEventApiService } from './../../services/mock-training-event-api.service';
+
 import { } from 'googlemaps';
 declare let google: any;
 @Component({
@@ -15,7 +16,10 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
   @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
 
-  constructor( public geolocationService: GeolocationService) {
+  constructor(
+    public geolocationService: GeolocationService,
+    public trainingEventApiService: MockTrainingEventApiService
+  ) {
 
   }
 
@@ -27,6 +31,8 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     // Add 'implements AfterViewInit' to the class.
     this.map = this.initMap();
+
+
   }
 
   /**
