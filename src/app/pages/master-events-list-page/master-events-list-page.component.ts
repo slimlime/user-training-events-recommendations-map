@@ -39,6 +39,13 @@ export class MasterEventsListPageComponent implements OnInit {
       ;
     console.log('​MasterEventsListPageComponent:: ngOnInit() -> trainingEvents', trainingEvents);
   }
+  /**
+   * Gets training events for a location
+   *
+   * @param {string} cityLocation
+   * @returns
+   * @memberof MasterEventsListPageComponent
+   */
   populateTrainingEvents(cityLocation: string) {
     const upcomingSortedEventsAtCity = this.trainingEventApiService
       .getMostRecentUpcomingEventsNumSliceInCityLocation(cityLocation)
