@@ -23,7 +23,8 @@ export class MockTrainingEventApiService {
   getEventByID(id: number): TrainingEvent {
     const seedTestData = DATA_SEED_TRAINING_EVENTS;
     const foundTrainingEvent = seedTestData.find( trainingEvent => {
-      return trainingEvent.id === id;
+      const trainingIDFound: boolean = trainingEvent.id === id;
+      return trainingIDFound;
     });
 
     return foundTrainingEvent;
