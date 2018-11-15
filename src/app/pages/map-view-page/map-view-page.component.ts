@@ -26,7 +26,7 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     // Add 'implements AfterViewInit' to the class.
-    this.initMap();
+    this.map = this.initMap();
   }
 
   /**
@@ -34,13 +34,15 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
    *
    * @memberof MapViewPageComponent
    */
-  initMap() {
+  initMap(): google.maps.Map {
     const mapProp: google.maps.MapOptions = {
       center: new google.maps.LatLng(-27.46794, 153.02809),
       zoom: 15,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+    const googleMap = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+
+    return googleMap;
   }
   /**
    * Get user location in response to user input.
