@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { TrainingEvent } from './../../models/training-event';
-import { ImageRetrievalService } from './../../services/image-retrieval.service';
 
 @Component({
   selector: 'app-event-list-item',
@@ -10,7 +9,7 @@ import { ImageRetrievalService } from './../../services/image-retrieval.service'
 })
 export class EventListItemComponent implements OnInit {
   @Input() trainingEvent: TrainingEvent;
-  constructor(public imageRetrievalService: ImageRetrievalService) {
+  constructor() {
 
   }
 

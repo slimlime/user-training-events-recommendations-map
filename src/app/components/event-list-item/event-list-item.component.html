@@ -1,9 +1,15 @@
 <p>
-  event-list-item works!
-  {{trainingEvent.title}}
   <!-- Need actual image -->
-  {{trainingEvent.imageUrl}}
+  <!-- Search for id details? or just pass the data in shared service or i/o bind -->
+  <a href="/event/details/:id" class="thumb">
+    <img src="{{trainingEvent.imageUrl}}" alt="{{trainingEvent.title}}" />
+  </a>
   {{trainingEvent.dateTime}}
+  {{trainingEvent.title}}
+
+
+  <!-- {{trainingEvent.imageUrl}} -->
+
   {{trainingEvent.availableSeats}}
   {{trainingEvent.locationCityName}}
 
