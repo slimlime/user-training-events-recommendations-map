@@ -33,12 +33,7 @@ export class MasterEventsListPageComponent implements OnInit {
 
   }
 
-  testTrainingEventsUnsortedMockData() {
-    const trainingEvents: TrainingEvent[] = this.trainingEventApiService
-      .getMostRecentUpcomingEvents()
-      ;
-    console.log('​MasterEventsListPageComponent:: ngOnInit() -> trainingEvents', trainingEvents);
-  }
+
   /**
    * Gets training events for a location
    *
@@ -52,5 +47,16 @@ export class MasterEventsListPageComponent implements OnInit {
     ;
     console.log('​MasterEventsListPageComponent:: ngOnInit() -> upcomingSortedEventsAtBrisbane', upcomingSortedEventsAtCity);
     return upcomingSortedEventsAtCity;
+  }
+
+  /**
+   * Get user location in response to user input.
+   * On page load results in a [Violation]
+   *
+   * @memberof MasterEventsListPageComponent
+   */
+  getUserLocation() {
+    const userLocation = this.geolocationService.getUserLocation();
+    console.log('​MasterEventsListPageComponent:: ngOnInit() -> userLocation', userLocation);
   }
 }
