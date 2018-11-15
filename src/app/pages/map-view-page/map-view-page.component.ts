@@ -45,6 +45,13 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     return googleMap;
   }
 
+  /**
+   * Sets up markers to plot training event information on map.
+   *
+   * @param {google.maps.Map} googleMap the map to apply the marker onto.
+   * @param {TrainingEvent} trainingEvent the training event for marker details.
+   * @memberof MapViewPageComponent
+   */
   setupTrainingEventMarker(googleMap: google.maps.Map, trainingEvent: TrainingEvent) {
     const markerCoordinates: any = {
       lat: trainingEvent.locationCoordinates[0],
