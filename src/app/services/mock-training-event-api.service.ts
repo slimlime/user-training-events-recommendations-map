@@ -12,6 +12,23 @@ export class MockTrainingEventApiService {
 
   // - TODO: Add asynchronous reactivity e.g. Promise Observable to mock delay in network requests.
 
+
+  /**
+   * Get a specific event searched by ID.
+   * -- TODO: Temp function. Can separate training event service from API. Caching
+   * @param {number} id
+   * @returns {TrainingEvent}
+   * @memberof MockTrainingEventApiService
+   */
+  getEventByID(id: number): TrainingEvent {
+    const seedTestData = DATA_SEED_TRAINING_EVENTS;
+    const foundTrainingEvent = seedTestData.find( trainingEvent => {
+      return trainingEvent.id === id;
+    });
+
+    return foundTrainingEvent;
+  }
+
   /**
    * Default five events
    *
