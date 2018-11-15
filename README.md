@@ -8,7 +8,7 @@ ngh --dir="dist/UserLocationTrainingEventMapRecommendations"
 ```
 
 * Alternate lean journal log instead of GitHub issue tracking/project management tab (e.g. hn algolia paginator repo)
-* /Proposed task estimation
+* /Proposed task estimation ~doubled
 * 5:30 am
 * Alternate lean journal log instead of GitHub issue tracking/project management tab (e.g. hn algolia paginator repo)
 * 30 minutes planning project structure
@@ -19,7 +19,7 @@ ngh --dir="dist/UserLocationTrainingEventMapRecommendations"
 * 10-20 minutes Check training events by city for user-relevant data.
 * 10 minutes event details working properly^
 * 30 minutes Google Maps with user location + markers. Event details popup.
-* 30 minutes tests + … hours if unintended bugs found. Finalising
+* ~Hours Testing + … + if unintended bugs found. Finalising
 * ++ fun time CI/CD, repeatable visual studio workspace config to source control, Docker, Travis CI, AWS CodePipeline,
 * +++ Better TSLint rules - Microsoft SDL
 
