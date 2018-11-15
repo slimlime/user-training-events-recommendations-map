@@ -1,7 +1,7 @@
 <p>
   <!-- Need actual image -->
   <!-- Search for id details? or just pass the data in shared service or i/o bind -->
-  <a href="/events/details/:id" class="thumb">
+  <a (click)="navigateToEventDetail(this.router, trainingEvent)"  class="thumb">
     <img src="{{trainingEvent.imageUrl}}" alt="{{trainingEvent.title}}" />
   </a>
   {{trainingEvent.dateTime}}

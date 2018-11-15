@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { TrainingEvent } from './../../models/training-event';
 
@@ -9,11 +10,14 @@ import { TrainingEvent } from './../../models/training-event';
 })
 export class EventListItemComponent implements OnInit {
   @Input() trainingEvent: TrainingEvent;
-  constructor() {
+  constructor( public router: Router) {
 
   }
 
   ngOnInit() {
   }
 
+  navigateToEventDetail(router: Router, trainingEvent: TrainingEvent) {
+    router.navigate(['events/details', trainingEvent.id]);
+  }
 }
