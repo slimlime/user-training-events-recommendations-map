@@ -1,5 +1,12 @@
 # Planning
 
+## ngh deployed @ `https://slimlime.github.io/user-training-events-recommendations-map/`
+
+```bash
+ng build --base-href ./
+ngh --dir="dist/UserLocationTrainingEventMapRecommendations"
+```
+
 * Alternate lean journal log instead of GitHub issue tracking/project management tab (e.g. hn algolia paginator repo)
 * /Proposed task estimation
 * 5:30 am
