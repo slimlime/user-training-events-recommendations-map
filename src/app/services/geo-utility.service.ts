@@ -13,7 +13,20 @@ import { LocationCoordinatePt } from './../models/training-event';
 })
 export class GeoUtilityService {
 
-  constructor() { }
+  constructor() {
+    this.degreesToRadians(180); // 3.141592653589793
+    this.getDistanceKilometresBetweenCoordinates(
+      {
+        latitude: -27.3,
+        longitude: 153.22
+      },
+      {
+        latitude: -27.32,
+        longitude: 153.24
+      }
+    ); // 2.974956444218144
+
+  }
 
    /**
    * Helper utility function to convert degrees to radians
@@ -23,6 +36,7 @@ export class GeoUtilityService {
    */
   degreesToRadians(degrees: number) {
     const radians = degrees * (Math.PI / 180);
+    console.log('​GeoUtilityService:: degreesToRadians() -> radians', radians);
     return radians;
   }
 
@@ -59,6 +73,7 @@ export class GeoUtilityService {
 
     // Distance in kilometres
     const distance = RRadiusOfEarthKm * cAngularDistanceTwoPtsRadians;
+    console.log('​GeoUtilityService:: constructor() -> distance', distance);
 
     return distance;
   }
