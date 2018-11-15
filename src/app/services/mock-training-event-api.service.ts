@@ -81,6 +81,14 @@ export class MockTrainingEventApiService {
     return mostRecentUpcomingCityEventsNumSlice;
   }
 
+  /**
+   * Utility function for filtering events array
+   *
+   * @param {TrainingEvent} trainingEvent
+   * @param {string} givenLocationCityName
+   * @returns
+   * @memberof MockTrainingEventApiService
+   */
   eventFilterHasCity(
     trainingEvent: TrainingEvent,
     givenLocationCityName: string
