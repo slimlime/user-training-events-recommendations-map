@@ -94,6 +94,7 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
       '<h2>' +
       trainingEvent.title +
       ' id: ' + trainingEvent.id +
+      ' city: ' + trainingEvent.locationCityName +
       ' coord: ' + trainingEvent.locationCoordinates +
       ' dateTime: ' + trainingEvent.dateTime +
       '</h2>' +
