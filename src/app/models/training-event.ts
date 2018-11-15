@@ -2,6 +2,10 @@
 
 // latitude, longitude coordinates. Make sure GeoJSON correct when Google vs GIS
 export type LocationCoordinates = [number, number];
+export interface LocationCoordinatePt {
+    readonly latitude: number;
+    readonly longitude: number;
+}
 
 export interface TrainingEvent {
     readonly id: number;
