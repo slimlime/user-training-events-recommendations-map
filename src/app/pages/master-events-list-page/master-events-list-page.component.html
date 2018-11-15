@@ -1,3 +1,10 @@
 <p>
   master-events-list-page works!
 </p>
+<h4>Upcoming local events</h4>
+<ul>
+  <li *ngFor="let trainingEventItem of this.upcomingTrainingEvents">
+    <app-event-list-item [trainingEvent]="trainingEventItem">
+    </app-event-list-item>
+  </li>
+</ul>
