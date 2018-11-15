@@ -32,6 +32,9 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     // Add 'implements AfterViewInit' to the class.
     this.map = this.initMap();
 
+    const trainingEvent = this.trainingEventApiService.getEventByID(1);
+
+    this.setupTrainingEventMarker(this.map, trainingEvent);
 
   }
 
@@ -58,7 +61,11 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
    * @param {TrainingEvent} trainingEvent the training event for marker details.
    * @memberof MapViewPageComponent
    */
-  setupTrainingEventMarker(googleMap: google.maps.Map, trainingEvent: TrainingEvent) {
+  setupTrainingEventMarker(
+    googleMap: google.maps.Map,
+    trainingEvent: TrainingEvent
+  ): google.maps.Marker {
+    //
     const markerCoordinates: any = {
       lat: trainingEvent.locationCoordinates[0],
       lng: trainingEvent.locationCoordinates[1]
@@ -69,7 +76,10 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
       map: googleMap,             // can add to map here or call setMap() later.
       title: trainingEvent.title
     };
-    const marker: google.maps.Marker = new google.maps.Marker(markerOptions)
+    const marker: google.maps.Marker = new google.maps.Marker(markerOptions);
+    console.log('​MapViewPageComponent:: marker', marker);
+
+    return marker;
   }
   /**
    * Get user location in response to user input.
