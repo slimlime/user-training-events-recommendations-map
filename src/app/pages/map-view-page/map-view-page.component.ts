@@ -110,7 +110,8 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     ;
     // Setup info window for extended description on marker click.
     const eventInfoWindowOptions: google.maps.InfoWindowOptions = {
-      content: contentHtml
+      content: contentHtml,
+      maxWidth: 200
     };
     const eventInfoWindow: google.maps.InfoWindow = new google.maps.InfoWindow(
       eventInfoWindowOptions
