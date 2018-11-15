@@ -34,8 +34,10 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
 
     const trainingEvent = this.trainingEventApiService.getEventByID(1);
 
-    this.setupTrainingEventMarker(this.map, trainingEvent);
-
+    const trainingEventsAnyLocation = this.trainingEventApiService
+      .getMostRecentUpcomingEvents()
+    ;
+    this.setupTrainingEventsMarkers(this.map, trainingEventsAnyLocation);
   }
 
   /**
@@ -54,6 +56,16 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     return googleMap;
   }
 
+  setupTrainingEventsMarkers(
+    googleMap: google.maps.Map,
+    trainingEvents: TrainingEvent[]) {
+
+    // Plot marker for each event
+    trainingEvents.forEach((trainingEvent: TrainingEvent) => {
+      this.setupTrainingEventMarker(googleMap, trainingEvent);
+    });
+
+  }
   /**
    * Sets up markers to plot training event information on map.
    *
@@ -76,11 +88,13 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
       map: googleMap,             // can add to map here or call setMap() later.
       title: trainingEvent.title
     };
+
     const marker: google.maps.Marker = new google.maps.Marker(markerOptions);
     console.log('​MapViewPageComponent:: marker', marker);
 
     return marker;
   }
+
   /**
    * Get user location in response to user input.
    * On page load results in a [Violation]
@@ -93,4 +107,5 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     return userLocation;
   }
 
+  // plotUserLocation
 }
