@@ -12,4 +12,13 @@ describe('MockTrainingEventApiService', () => {
   it('should be created', inject([MockTrainingEventApiService], (service: MockTrainingEventApiService) => {
     expect(service).toBeTruthy();
   }));
+
+  it(
+    'should retrieve id 1 Training Event with title: "Event Title A"',
+    inject(
+      [MockTrainingEventApiService],
+      (service: MockTrainingEventApiService) => {
+        expect(service.getEventByID(1).title).toBe('Event Title A');
+      })
+  );
 });
