@@ -1,0 +1,1314 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>user-location-training-event-map-recommendations documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">user-location-training-event-map-recommendations documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>MockTrainingEventApiService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/services/mock-training-event-api.service.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#geoUtilityService">geoUtilityService</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#compareDateSoonest">compareDateSoonest</a>
+                            </li>
+                            <li>
+                                <a href="#compareUpcomingEventLatest">compareUpcomingEventLatest</a>
+                            </li>
+                            <li>
+                                <a href="#compareUpcomingEventSoonest">compareUpcomingEventSoonest</a>
+                            </li>
+                            <li>
+                                <a href="#eventFilterHasCity">eventFilterHasCity</a>
+                            </li>
+                            <li>
+                                <a href="#getEventByID">getEventByID</a>
+                            </li>
+                            <li>
+                                <a href="#getEvents">getEvents</a>
+                            </li>
+                            <li>
+                                <a href="#getMostRecentUpcomingEvents">getMostRecentUpcomingEvents</a>
+                            </li>
+                            <li>
+                                <a href="#getMostRecentUpcomingEventsClosestToCoordinates">getMostRecentUpcomingEventsClosestToCoordinates</a>
+                            </li>
+                            <li>
+                                <a href="#getMostRecentUpcomingEventsNumSliceInCityLocation">getMostRecentUpcomingEventsNumSliceInCityLocation</a>
+                            </li>
+                            <li>
+                                <a href="#sortEventsDateTimeSoonest">sortEventsDateTimeSoonest</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(geoUtilityService: <a href="../injectables/GeoUtilityService.html">GeoUtilityService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:10</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>geoUtilityService</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/GeoUtilityService.html" target="_self" >GeoUtilityService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="compareDateSoonest"></a>
+                        <span class="name">
+                            <b>
+                            compareDateSoonest
+                            </b>
+                            <a href="#compareDateSoonest"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>compareDateSoonest(givenDate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, comparisonDate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="207" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:207</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Comparison function to get the future event that is happening soonest.
+The future dates that have least values are closest to the current date.
+Assumed.
+Could make this more generic.</p>
+<p>For Array.sort();</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>givenDate</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>comparisonDate</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="compareUpcomingEventLatest"></a>
+                        <span class="name">
+                            <b>
+                            compareUpcomingEventLatest
+                            </b>
+                            <a href="#compareUpcomingEventLatest"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>compareUpcomingEventLatest()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="227" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:227</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Comparison that gets the future event that is most distant from now.
+The future dates with larger values are further away from current date.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="compareUpcomingEventSoonest"></a>
+                        <span class="name">
+                            <b>
+                            compareUpcomingEventSoonest
+                            </b>
+                            <a href="#compareUpcomingEventSoonest"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>compareUpcomingEventSoonest(givenEvent: <a href="../interfaces/TrainingEvent.html">TrainingEvent</a>, comparisonEvent: <a href="../interfaces/TrainingEvent.html">TrainingEvent</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="177" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:177</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Comparison function to get the future event that is happening soonest.
+The future dates that have least values are closest to the current date.
+Assumed.
+For Array.sort();</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>givenEvent</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>comparisonEvent</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eventFilterHasCity"></a>
+                        <span class="name">
+                            <b>
+                            eventFilterHasCity
+                            </b>
+                            <a href="#eventFilterHasCity"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>eventFilterHasCity(trainingEvent: <a href="../interfaces/TrainingEvent.html">TrainingEvent</a>, givenLocationCityName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="135" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:135</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Utility function for filtering events array</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>trainingEvent</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                                <tr>
+                                                        <td>givenLocationCityName</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getEventByID"></a>
+                        <span class="name">
+                            <b>
+                            getEventByID
+                            </b>
+                            <a href="#getEventByID"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getEventByID(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:26</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Get a specific event searched by ID.
+-- TODO: Temp function. Can separate training event service from API. Caching</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getEvents"></a>
+                        <span class="name">
+                            <b>
+                            getEvents
+                            </b>
+                            <a href="#getEvents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getEvents(numEvents: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:46</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Default five events</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Default value</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>numEvents</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>5</code>
+                                                        </td>
+
+                                                        <td>
+                                                                <code><p>API would ideally sort before retrieving the results.
+Otherwise have to SELECT the whole table just for application usage</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent[]</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getMostRecentUpcomingEvents"></a>
+                        <span class="name">
+                            <b>
+                            getMostRecentUpcomingEvents
+                            </b>
+                            <a href="#getMostRecentUpcomingEvents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getMostRecentUpcomingEvents(numEventsWanted: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:60</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Default next five &#39;upcoming&#39; events in order from soonest to latest.
+Could make more generic.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Default value</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>numEventsWanted</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>5</code>
+                                                        </td>
+
+                                                        <td>
+                                                                <code><p>Default value five upcoming events to retrieve/select.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent[]</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getMostRecentUpcomingEventsClosestToCoordinates"></a>
+                        <span class="name">
+                            <b>
+                            getMostRecentUpcomingEventsClosestToCoordinates
+                            </b>
+                            <a href="#getMostRecentUpcomingEventsClosestToCoordinates"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getMostRecentUpcomingEventsClosestToCoordinates(coordinates: <a href="../interfaces/LocationCoordinatePt.html">LocationCoordinatePt</a>, numEventsWanted: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:114</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Get most recent upcoming events closest to coordinates
+e.g. Pass user location to get most relevant results.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Default value</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>coordinates</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/LocationCoordinatePt.html" target="_self" >LocationCoordinatePt</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+
+                                                </tr>
+                                                <tr>
+                                                        <td>numEventsWanted</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>5</code>
+                                                        </td>
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent[]</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getMostRecentUpcomingEventsNumSliceInCityLocation"></a>
+                        <span class="name">
+                            <b>
+                            getMostRecentUpcomingEventsNumSliceInCityLocation
+                            </b>
+                            <a href="#getMostRecentUpcomingEventsNumSliceInCityLocation"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getMostRecentUpcomingEventsNumSliceInCityLocation(locationCityName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, numEventsWanted: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="83" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:83</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Get events at the user&#39;s current location city to fulfil requirement:
+<em>Display events based on user&#39;s location.</em></p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Default value</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>locationCityName</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                        </td>
+
+                                                </tr>
+                                                <tr>
+                                                        <td>numEventsWanted</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code>5</code>
+                                                        </td>
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent[]</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sortEventsDateTimeSoonest"></a>
+                        <span class="name">
+                            <b>
+                            sortEventsDateTimeSoonest
+                            </b>
+                            <a href="#sortEventsDateTimeSoonest"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>sortEventsDateTimeSoonest(events: <a href="../interfaces/TrainingEvent.html">TrainingEvent[]</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="151" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:151</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>events</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent[]</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                                    <b>Example :</b>
+                                        <div>
+                                            <pre class="line-numbers"><code class="language-html">&amp;quot;2019-08-04T00:30:39.038Z&amp;quot; &amp;quot;2019-02-02T03:47:07.045Z&amp;quot;</code></pre>
+                                        </div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="../interfaces/TrainingEvent.html" target="_self" >TrainingEvent[]</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="geoUtilityService"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            geoUtilityService
+                            </b>
+                            <a href="#geoUtilityService"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>geoUtilityService:     <code><a href="../injectables/GeoUtilityService.html" target="_self" >GeoUtilityService</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../injectables/GeoUtilityService.html" target="_self" >GeoUtilityService</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/services/mock-training-event-api.service.ts:12</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+
+import { TrainingEvent, LocationCoordinatePt } from &#x27;./../models/training-event&#x27;;
+import { DATA_SEED_TRAINING_EVENTS } from &#x27;./../seed/seed-training-events&#x27;;
+import { GeoUtilityService } from &#x27;./geo-utility.service&#x27;;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class MockTrainingEventApiService {
+
+  constructor(public geoUtilityService: GeoUtilityService) {
+
+  }
+
+  // - TODO: Add asynchronous reactivity e.g. Promise Observable to mock delay in network requests.
+
+
+  /**
+   * Get a specific event searched by ID.
+   * -- TODO: Temp function. Can separate training event service from API. Caching
+   * @param {number} id
+   * @returns {TrainingEvent}
+   * @memberof MockTrainingEventApiService
+   */
+  getEventByID(id: number): TrainingEvent {
+    const seedTestData &#x3D; DATA_SEED_TRAINING_EVENTS;
+    const foundTrainingEvent &#x3D; seedTestData.find( trainingEvent &#x3D;&gt; {
+      const trainingIDFound: boolean &#x3D; trainingEvent.id &#x3D;&#x3D;&#x3D; id;
+      return trainingIDFound;
+    });
+
+    return foundTrainingEvent;
+  }
+
+  /**
+   * Default five events
+   *
+   * @param {number} [numEvents&#x3D;5] // Unused as need to process whole mock data in app.\
+   * API would ideally sort before retrieving the results.
+   * Otherwise have to SELECT the whole table just for application usage
+   *
+   * @returns {TrainingEvent[]}
+   * @memberof MockTrainingEventApiService
+   */
+  getEvents(numEvents: number &#x3D; 5): TrainingEvent[] {
+    const seedTestData &#x3D; DATA_SEED_TRAINING_EVENTS;
+
+    return seedTestData;
+  }
+
+  /**
+   * Default next five &#x27;upcoming&#x27; events in order from soonest to latest.
+   * Could make more generic.
+   *
+   * @param {number} [numEventsWanted&#x3D;5] Default value five upcoming events to retrieve/select.
+   * @returns {TrainingEvent[]}
+   * @memberof MockTrainingEventApiService
+   */
+  getMostRecentUpcomingEvents(numEventsWanted: number &#x3D; 5): TrainingEvent[] {
+    const events &#x3D; this.getEvents(numEventsWanted);
+
+    const mostRecentEvents &#x3D; this.sortEventsDateTimeSoonest(events);
+    console.log(&#x27;​MockTrainingEventApiService:: constructor() -&gt; mostRecentEvents full list&#x27;, mostRecentEvents);
+
+    // Get the specified number of events after sorting. E.g. Next five events.
+    // First five events slice 0..5 or undefined,5 for optional parameter.
+    const mostRecentEventsNextNumSlice &#x3D; mostRecentEvents.slice(undefined, numEventsWanted);
+    console.log(&#x27;​MockTrainingEventApiService:: constructor() -&gt; mostRecentEventsNextSlice&#x27;, mostRecentEventsNextNumSlice);
+
+    return mostRecentEventsNextNumSlice;
+  }
+
+  /**
+   * Get events at the user&#x27;s current location city to fulfil requirement:
+   * *Display events based on user&#x27;s location.*
+   *
+   * @param {string} locationCityName
+   * @param {number} [numEventsWanted&#x3D;5]
+   * @returns {TrainingEvent[]}
+   * @memberof MockTrainingEventApiService
+   */
+  getMostRecentUpcomingEventsNumSliceInCityLocation(
+    locationCityName: string,
+    numEventsWanted: number &#x3D; 5
+  ): TrainingEvent[] {
+    const events &#x3D; this.getEvents();
+
+    // Get events for a specific city.
+    const cityEvents &#x3D; events.filter((trainingEvent: TrainingEvent) &#x3D;&gt; {
+      const eventIsAtCity &#x3D; this.eventFilterHasCity(trainingEvent, locationCityName);
+      return eventIsAtCity;
+    });
+
+    const mostRecentUpcomingCityEvents &#x3D; this.sortEventsDateTimeSoonest(cityEvents);
+
+    const mostRecentUpcomingCityEventsNumSlice &#x3D; mostRecentUpcomingCityEvents
+      .slice(undefined, numEventsWanted)
+    ;
+
+
+    return mostRecentUpcomingCityEventsNumSlice;
+  }
+
+  /**
+   * Get most recent upcoming events closest to coordinates
+   * e.g. Pass user location to get most relevant results.
+   *
+   * @param {LocationCoordinatePt} coordinates
+   * @param {number} [numEventsWanted&#x3D;5]
+   * @returns {TrainingEvent[]}
+   * @memberof MockTrainingEventApiService
+   */
+  getMostRecentUpcomingEventsClosestToCoordinates(
+    coordinates: LocationCoordinatePt,
+    numEventsWanted: number &#x3D; 5)
+  : TrainingEvent[] {
+    // Maybe better to use map bounds?
+    // 1. Get the geographically closest training events
+
+    // 2. Sort by recent upcoming soonest order.
+
+    // Return num events e.g. 5 results
+
+    return ;
+  }
+  /**
+   * Utility function for filtering events array
+   *
+   * @param {TrainingEvent} trainingEvent
+   * @param {string} givenLocationCityName
+   * @returns
+   * @memberof MockTrainingEventApiService
+   */
+  eventFilterHasCity(
+    trainingEvent: TrainingEvent,
+    givenLocationCityName: string
+  ) {
+    const trainingEventCityName &#x3D; trainingEvent.locationCityName;
+    const sameCityNameFound &#x3D; trainingEventCityName &#x3D;&#x3D;&#x3D; givenLocationCityName;
+
+    return sameCityNameFound;
+  }
+
+  /**
+   *
+   * @example &quot;2019-08-04T00:30:39.038Z&quot; &quot;2019-02-02T03:47:07.045Z&quot;
+   * @param {TrainingEvent[]} events
+   * @memberof MockTrainingEventApiService
+   */
+  sortEventsDateTimeSoonest(events: TrainingEvent[]): TrainingEvent[] {
+    // use Array.sort() with custom function
+    // ISO 8601 can be sorted lexicographically. Or use Date
+    const trainingEvents &#x3D; events;
+
+    const trainingEventsSortedSoonest &#x3D; trainingEvents.sort(
+      (firstGivenEvent, secondComparisonEvent) &#x3D;&gt; {
+        // If a &lt; b returns -ve or -1, a is the &#x60;soonest&#x60; upcoming event.
+        const comparisonSoonest: number &#x3D; this.compareUpcomingEventSoonest(
+          firstGivenEvent,
+          secondComparisonEvent
+        );
+        return comparisonSoonest;
+      }
+    );
+
+    return trainingEventsSortedSoonest;
+   }
+
+    /**
+   * Comparison function to get the future event that is happening soonest.
+   * The future dates that have least values are closest to the current date.
+   * Assumed.
+   * For Array.sort();
+   * @memberof MockTrainingEventApiService
+   */
+  compareUpcomingEventSoonest(
+    givenEvent: TrainingEvent,
+    comparisonEvent: TrainingEvent
+  ): number {
+    // Comparing the given event DateTime to the other event for comparison
+
+    const soonestFutureComparison &#x3D; this.compareDateSoonest(
+      givenEvent.dateTime,
+      comparisonEvent.dateTime
+    );
+
+    // If first givenDate is equal to comparisonDate return 0;
+    // If first givenDate is smaller, -1 or the negative difference.
+    // If first givenDate is larger, +1 (can just use the difference if arith)
+
+    // doesn&#x27;t matter whether -1 or 0. unless possible recursion?
+
+    return soonestFutureComparison;
+  }
+
+
+  /**
+   * Comparison function to get the future event that is happening soonest.
+   * The future dates that have least values are closest to the current date.
+   * Assumed.
+   * Could make this more generic.
+   *
+   * For Array.sort();
+   * @memberof MockTrainingEventApiService
+   */
+  compareDateSoonest(givenDate: string, comparisonDate: string): number {
+
+    // Comparing the givenDate to the other comparisonDate
+    // If first givenDate is equal to comparisonDate return 0;
+    // If first givenDate is smaller, -1 or the negative difference.
+    // If first givenDate is larger, +1 (can just use the difference if arith)
+    const givenDateIsSooner &#x3D; givenDate &lt; comparisonDate;
+
+    // doesn&#x27;t matter whether -1 or 0. unless possible recursion?
+
+    return givenDateIsSooner ? -1 : 1;
+  }
+
+
+  /**
+   * Comparison that gets the future event that is most distant from now.
+   * The future dates with larger values are further away from current date.
+   *
+   * @memberof MockTrainingEventApiService
+   */
+  compareUpcomingEventLatest() {
+
+  }
+
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'MockTrainingEventApiService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
