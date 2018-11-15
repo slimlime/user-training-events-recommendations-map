@@ -1,4 +1,4 @@
-import { LocationCoordinatePt } from './../../models/training-event';
+import { LocationCoordinatePt, TrainingEvent } from './../../models/training-event';
 /// <reference types="@types/googlemaps" />
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 
@@ -43,6 +43,20 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     const googleMap = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
 
     return googleMap;
+  }
+
+  setupTrainingEventMarker(googleMap: google.maps.Map, trainingEvent: TrainingEvent) {
+    const markerCoordinates: any = {
+      lat: trainingEvent.locationCoordinates[0],
+      lng: trainingEvent.locationCoordinates[1]
+    }; // ?  bug () => explicitly typing google.maps.LatLng object.
+
+    const markerOptions: any = {
+      position: markerCoordinates,
+      map: googleMap,             // can add to map here or call setMap() later.
+      title: trainingEvent.title
+    };
+    const marker: google.maps.Marker = new google.maps.Marker(markerOptions)
   }
   /**
    * Get user location in response to user input.
