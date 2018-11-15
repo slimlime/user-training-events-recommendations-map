@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MapViewPageComponent } from './map-view-page.component';
 // Need mock-google maps
 // declare let google: any;
+require('src/app/mocks/googlemaps');
 
 describe('MapViewPageComponent', () => {
   let component: MapViewPageComponent;
@@ -22,6 +23,8 @@ describe('MapViewPageComponent', () => {
   });
 
   it('should create', () => {
+    require('src/app/mocks/googlemaps');
+    let google: any;
     expect(component).toBeTruthy();
   });
 });

@@ -4,8 +4,9 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    files = [
-      'src/app/mocks/google-maps-mock.js'
+    files: [
+      'src/app/mocks/google-maps-mock.js',
+      'http://maps.googleapis.com/maps/api/js?sensor=false&language=en'
     ],
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
     plugins: [
@@ -13,7 +14,8 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma'),
+      require('http://maps.googleapis.com/maps/api/js?sensor=false&language=en')
     ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
