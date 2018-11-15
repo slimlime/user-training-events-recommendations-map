@@ -115,12 +115,13 @@ export class MockTrainingEventApiService {
     coordinates: LocationCoordinatePt,
     numEventsWanted: number = 5)
   : TrainingEvent[] {
+    // Maybe better to use map bounds?
     // 1. Get the geographically closest training events
 
     // 2. Sort by recent upcoming soonest order.
 
     // Return num events e.g. 5 results
-    
+
     return ;
   }
   /**
