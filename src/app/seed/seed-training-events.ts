@@ -1,10 +1,10 @@
 import { TrainingEvent } from './../models/training-event';
 
-const DATA_DESCRIPTION_PLACEHOLDER_TEXT = 'Lorem ipsum dolor sit amet, \
-    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et \
-    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation \
-    ullamco laboris nisi ut aliquip ex ea commodo consequat.\
-';
+const DATA_DESCRIPTION_PLACEHOLDER_TEXT = 'Lorem ipsum dolor sit amet,' +
+    'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore' +
+    'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud' +
+    'exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+;
 
 
 // lol. Magic numbers. -- TODO: Encapsulate logic. YAGNI.

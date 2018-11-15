@@ -68,7 +68,7 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
   }
   /**
    * Sets up markers to plot training event information on map.
-   *
+   * Added associated infowindow to open on marker click.
    * @param {google.maps.Map} googleMap the map to apply the marker onto.
    * @param {TrainingEvent} trainingEvent the training event for marker details.
    * @memberof MapViewPageComponent
@@ -77,20 +77,47 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     googleMap: google.maps.Map,
     trainingEvent: TrainingEvent
   ): google.maps.Marker {
-    //
+    // Setup marker
     const markerCoordinates: any = {
       lat: trainingEvent.locationCoordinates[0],
       lng: trainingEvent.locationCoordinates[1]
     }; // ?  bug () => explicitly typing google.maps.LatLng object.
 
-    const markerOptions: any = {
+    const markerOptions: google.maps.MarkerOptions = {
       position: markerCoordinates,
       map: googleMap,             // can add to map here or call setMap() later.
       title: trainingEvent.title
     };
 
+    // Setup content for info window
+    const contentHtml = '<div>' +
+      '<h2>' +
+      trainingEvent.title +
+      '</h2>' +
+      trainingEvent.description +
+      '</div>'
+    ;
+    // Setup info window for extended description on marker click.
+    const eventInfoWindowOptions: google.maps.InfoWindowOptions = {
+      content: contentHtml
+    };
+    const eventInfoWindow: google.maps.InfoWindow = new google.maps.InfoWindow({
+
+      eventInfoWindowOptions
+    });
+    console.log('​MapViewPageComponent:: eventInfoWindow', eventInfoWindow);
+    // Create marker
     const marker: google.maps.Marker = new google.maps.Marker(markerOptions);
     console.log('​MapViewPageComponent:: marker', marker);
+
+    // Add info window to marker for click event.
+    marker.addListener(
+      'click',
+      (markerClickData: any) => {
+        console.log('​MapViewPageComponent:: markerClickData', markerClickData);
+        eventInfoWindow.open(googleMap, marker);
+      }
+    );
 
     return marker;
   }
