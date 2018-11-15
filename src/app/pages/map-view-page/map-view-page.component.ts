@@ -2,8 +2,8 @@
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 
 import { GeolocationService } from './../../services/geolocation.service';
-
-declare var google;
+import { } from 'googlemaps';
+declare let google: any;
 @Component({
   selector: 'app-map-view-page',
   templateUrl: './map-view-page.component.html',
@@ -11,7 +11,7 @@ declare var google;
 })
 export class MapViewPageComponent implements OnInit, AfterViewInit {
   // # hashtag template reference variable
-  @ViewChild('googlemap') gmapElement: any;
+  @ViewChild('gmap') gmapElement: any;
   map: google.maps.Map;
 
   constructor( public geolocationService: GeolocationService) {
