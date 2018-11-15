@@ -93,6 +93,9 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     const contentHtml = '<div>' +
       '<h2>' +
       trainingEvent.title +
+      ' id: ' + trainingEvent.id +
+      ' coord: ' + trainingEvent.locationCoordinates +
+      ' dateTime: ' + trainingEvent.dateTime +
       '</h2>' +
       trainingEvent.description +
       '</div>'
@@ -101,10 +104,9 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     const eventInfoWindowOptions: google.maps.InfoWindowOptions = {
       content: contentHtml
     };
-    const eventInfoWindow: google.maps.InfoWindow = new google.maps.InfoWindow({
-
+    const eventInfoWindow: google.maps.InfoWindow = new google.maps.InfoWindow(
       eventInfoWindowOptions
-    });
+    );
     console.log('​MapViewPageComponent:: eventInfoWindow', eventInfoWindow);
     // Create marker
     const marker: google.maps.Marker = new google.maps.Marker(markerOptions);
