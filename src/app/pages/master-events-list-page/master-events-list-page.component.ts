@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { TrainingEvent } from '../../models/training-event';
+import { GeolocationService } from './../../services/geolocation.service';
 import { MockTrainingEventApiService } from './../../services/mock-training-event-api.service';
 
 @Component({
@@ -16,7 +17,10 @@ export class MasterEventsListPageComponent implements OnInit {
   // Can encapsulate logic in service as needed.
 
 
-  constructor(public trainingEventApiService: MockTrainingEventApiService) {
+  constructor(
+    public trainingEventApiService: MockTrainingEventApiService,
+    public geolocationService: GeolocationService
+  ) {
 
   }
 
