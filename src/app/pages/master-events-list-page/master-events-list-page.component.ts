@@ -10,21 +10,36 @@ import { MockTrainingEventApiService } from './../../services/mock-training-even
 })
 export class MasterEventsListPageComponent implements OnInit {
 
+  // Simpler to concrete the properties here. Could also pass full reactivity.
+  upcomingTrainingEvents: TrainingEvent[] = [];
+  cityLocation = 'Brisbane'; // default
+  // Can encapsulate logic in service as needed.
+
+
   constructor(public trainingEventApiService: MockTrainingEventApiService) {
 
   }
 
   ngOnInit() {
-    const trainingEvents: TrainingEvent[] = this.trainingEventApiService
-      .getMostRecentUpcomingEvents()
-    ;
-    console.log('​MasterEventsListPageComponent:: ngOnInit() -> trainingEvents', trainingEvents);
 
-    const upcomingSortedEventsAtBrisbane = this.trainingEventApiService
-      .getMostRecentUpcomingEventsNumSliceInCityLocation('Brisbane')
-    ;
-    console.log('​MasterEventsListPageComponent:: ngOnInit() -> upcomingSortedEventsAtBrisbane', upcomingSortedEventsAtBrisbane);
+    // Get events to populate list.
+    const upcomingEventsRecentAtCity = this.populateTrainingEvents(this.cityLocation);
+
+    this.upcomingTrainingEvents = upcomingEventsRecentAtCity;
 
   }
 
+  testTrainingEventsUnsortedMockData() {
+    const trainingEvents: TrainingEvent[] = this.trainingEventApiService
+      .getMostRecentUpcomingEvents()
+      ;
+    console.log('​MasterEventsListPageComponent:: ngOnInit() -> trainingEvents', trainingEvents);
+  }
+  populateTrainingEvents(cityLocation: string) {
+    const upcomingSortedEventsAtCity = this.trainingEventApiService
+      .getMostRecentUpcomingEventsNumSliceInCityLocation(cityLocation)
+    ;
+    console.log('​MasterEventsListPageComponent:: ngOnInit() -> upcomingSortedEventsAtBrisbane', upcomingSortedEventsAtCity);
+    return upcomingSortedEventsAtCity;
+  }
 }
