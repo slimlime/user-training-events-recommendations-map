@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MapViewPageComponent } from './map-view-page.component';
+// Need mock-google maps
+// declare let google: any;
 
 describe('MapViewPageComponent', () => {
   let component: MapViewPageComponent;
