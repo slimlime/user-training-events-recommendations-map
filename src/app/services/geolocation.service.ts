@@ -1,5 +1,3 @@
-/// <reference types="@types/googlemaps" />
-
 import { LocationCoordinates, LocationCoordinatePt } from './../models/training-event';
 import { Injectable } from '@angular/core';
 
