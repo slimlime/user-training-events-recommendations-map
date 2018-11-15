@@ -27,6 +27,12 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     // Add 'implements AfterViewInit' to the class.
     this.initMap();
   }
+
+  /**
+   * Setup map with options
+   *
+   * @memberof MapViewPageComponent
+   */
   initMap() {
     const mapProp: google.maps.MapOptions = {
       center: new google.maps.LatLng(-27.46794, 153.02809),
