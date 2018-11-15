@@ -56,6 +56,13 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     return googleMap;
   }
 
+  /**
+   * Setup Google Maps Markers for all the training events in the array
+   *
+   * @param {google.maps.Map} googleMap
+   * @param {TrainingEvent[]} trainingEvents
+   * @memberof MapViewPageComponent
+   */
   setupTrainingEventsMarkers(
     googleMap: google.maps.Map,
     trainingEvents: TrainingEvent[]) {
