@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GeolocationService {
-  userLocation = {
+  userLocation: LocationCoordinatePt = {
     latitude: -27.1,
     longitude: 153
   };
