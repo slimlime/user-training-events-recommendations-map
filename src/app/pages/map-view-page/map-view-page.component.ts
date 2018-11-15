@@ -1,3 +1,4 @@
+import { LocationCoordinatePt } from './../../models/training-event';
 /// <reference types="@types/googlemaps" />
 import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 
@@ -41,4 +42,16 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
     };
     this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
   }
+  /**
+   * Get user location in response to user input.
+   * On page load results in a [Violation]
+   * @returns {LocationCoordinatePt}
+   * @memberof MapViewPageComponent
+   */
+  getUserLocation(): LocationCoordinatePt {
+    const userLocation = this.geolocationService.getUserLocation();
+    console.log('​MapViewPageComponent:: getUserLocation() -> userLocation', userLocation);
+    return userLocation;
+  }
+
 }
