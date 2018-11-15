@@ -48,8 +48,7 @@ export class MapViewPageComponent implements OnInit, AfterViewInit {
   initMap(): google.maps.Map {
     const mapProp: google.maps.MapOptions = {
       center: new google.maps.LatLng(-27.46794, 153.02809),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      zoom: 15
     };
     const googleMap = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
 
